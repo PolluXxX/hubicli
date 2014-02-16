@@ -126,7 +126,7 @@ func main() {
 		}
 	}
 
-	fmt.Fprintf(os.Stderr, "hubicli: unknown subcommand %q\nRun 'ovhcloud help' for usage.\n", args[0])
+	fmt.Fprintf(os.Stderr, "hubicli: unknown subcommand %q\nRun 'hubicli help' for usage.\n", args[0])
 	setExitStatus(2)
 	exit()
 }
