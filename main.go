@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"flag"
 	"fmt"
-	"ghubic"
 	"io"
 	"log"
 	"os"
@@ -13,6 +12,8 @@ import (
 	"text/template"
 	"unicode"
 	"unicode/utf8"
+
+	"github.com/polluxxx/ghubic"
 )
 
 // A Command is an implementation of a hubicli command

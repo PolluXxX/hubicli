@@ -3,12 +3,13 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"ghubic"
-	"goauth2"
 	"io/ioutil"
 	"net/url"
 	"os"
 	"os/user"
+
+	"github.com/polluxxx/ghubic"
+	"github.com/polluxxx/goauth2"
 )
 
 const (
