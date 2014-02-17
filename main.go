@@ -66,6 +66,7 @@ func (c *Command) Runnable() bool {
 var commands = []*Command{
 	cmdInfo,
     cmdAdd,
+    cmdList,
 }
 
 var exitStatus = 0

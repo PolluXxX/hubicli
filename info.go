@@ -29,11 +29,19 @@ var infoTemplate = `Information about your hubiC account
     Account usage:
         {{.Usage.Used}} used bytes
         {{.Usage.Quota}} total bytes
+
+    OpenStack:
+        Endpoint: {{.Credentials.Endpoint}}
+        X-Auth-Token: {{.Credentials.Token}}
 `
 
 func runInfo(cmd *Command, args []string) {
 	if Account.Usage == nil {
 		Account.GetUsage()
+	}
+    
+    if Account.Credentials == nil {
+		Account.GetCredentials()
 	}
 
 	tmpl(os.Stdout, infoTemplate, Account)
