@@ -19,29 +19,29 @@ func init() {
 }
 
 func runList(cmd *Command, args []string) {
-    if len(args) > 1 {
+	if len(args) > 1 {
 		help([]string{cmd.Name()})
 		return
 	}
 
-    path := ""
-    if len(args) > 0 {
-        path = args[0]
-    }
+	path := ""
+	if len(args) > 0 {
+		path = args[0]
+	}
 
-	files, err := Account.List(path)
+	files, err := Account.ListFiles(path)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-    for _, file := range *files {
-        name := file.Name
-        if file.ContentType == "application/directory" {
-            name += "/"
-        }
+	for _, file := range *files {
+		name := file.Name
+		if file.ContentType == "application/directory" {
+			name += "/"
+		}
 
-        if name != "" {
-            fmt.Println(name)
-        }
-    }
+		if name != "" {
+			fmt.Println(name)
+		}
+	}
 }
