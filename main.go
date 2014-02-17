@@ -65,8 +65,8 @@ func (c *Command) Runnable() bool {
 // This array stores all available commands
 var commands = []*Command{
 	cmdInfo,
-    cmdAdd,
-    cmdList,
+	cmdAdd,
+	cmdList,
 }
 
 var exitStatus = 0

@@ -39,8 +39,8 @@ func runInfo(cmd *Command, args []string) {
 	if Account.Usage == nil {
 		Account.GetUsage()
 	}
-    
-    if Account.Credentials == nil {
+
+	if Account.Credentials == nil {
 		Account.GetCredentials()
 	}
 

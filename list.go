@@ -1,8 +1,8 @@
 package main
 
 import (
-    "log"
-    "fmt"
+	"fmt"
+	"log"
 )
 
 var cmdList = &Command{
@@ -19,9 +19,9 @@ func init() {
 }
 
 func runList(cmd *Command, args []string) {
-    files, err := Account.List("/")
-    if err != nil {
-        log.Fatal(err)
-    }
-    fmt.Printf("%s\n", files)
+	files, err := Account.List("/")
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("%s\n", files)
 }
