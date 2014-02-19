@@ -12,12 +12,6 @@ import (
 	"github.com/polluxxx/goauth2"
 )
 
-const (
-	ClientId     = "api_hubic_1366206728U6faUvDSfE1iFImoFAFUIfDRbJytlaY0"
-	ClientSecret = "gXfu3KUIO1K57jUsW7VgKmNEhOWIbFdy7r8Z2xBdZn5K6SMkMmnU4lQUcnRy5E26"
-	RedirectUrl  = "https://api.hubic.com"
-)
-
 type hubicConfig struct {
 	AccessToken  string
 	RefreshToken string
