@@ -33,6 +33,8 @@ var infoTemplate = `Information about your hubiC account
     OpenStack:
         Endpoint: {{.Credentials.Endpoint}}
         X-Auth-Token: {{.Credentials.Token}}
+
+        curl -XGET -H'X-Auth-Token: {{.Credentials.Token}}' "{{.Credentials.Endpoint}}/default/"
 `
 
 func runInfo(cmd *Command, args []string) {
